@@ -1,0 +1,36 @@
+@import "~src/styles.scss";
+
+.searched-locations-details--data td,
+.searched-locations-details--data th {
+  border: 1px solid $primaryBorder;
+  padding: 8px;
+}
+
+.searched-locations-details--data tr:nth-child(even) {
+  background-color: $selectedText;
+}
+
+.searched-locations-details--data tr:hover {
+  background-color: $hoverBackground;
+}
+
+.searched-locations-details--data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: $themeColor;
+  color: $selectedText;
+}
+
+.searched-locations-details--data {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.searched-locations-details--nodata {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid $primaryBorder;
+  border-top: none;
+}

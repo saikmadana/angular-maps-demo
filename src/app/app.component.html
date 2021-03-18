@@ -1,0 +1,10 @@
+<section class="app__component">
+    <div class="toggler">
+        <div class="toggler--item map" [ngClass]="{'active': currentRoute === ('/'+ROUTE_PATHS.HOME)}"
+            (click)="goto(ROUTE_PATHS.HOME)">Locator</div>
+        <div class="toggler--item details" [ngClass]="{'active': currentRoute === ('/'+ROUTE_PATHS.DETAILS)}"
+            (click)="goto(ROUTE_PATHS.DETAILS)">List</div>
+    </div>
+
+    <router-outlet></router-outlet>
+</section>

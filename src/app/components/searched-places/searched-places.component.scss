@@ -1,0 +1,36 @@
+@import "~src/styles.scss";
+
+.searched-locations--data {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.searched-locations--data td,
+.searched-locations--data th {
+  border: 1px solid $primaryBorder;
+  padding: 8px;
+}
+
+.searched-locations--data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: $themeColor;
+  color: $primaryText;
+}
+
+.searched-locations--nodata {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid $primaryBorder;
+  border-top: none;
+}
+
+.searched-locations--data tr:nth-child(even) {
+  background-color: $selectedText;
+}
+
+.searched-locations--data tr:hover {
+  background-color: $hoverBackground;
+}

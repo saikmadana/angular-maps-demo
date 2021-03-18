@@ -1,0 +1,21 @@
+<section class="searched-locations--section">
+    <div class="searched-locations">
+        <table class="searched-locations--data">
+            <thead>
+                <th>Location Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </thead>
+            <tbody>
+                <tr class="searched-location" *ngFor="let location of locations">
+                    <td>{{location.name}}</td>
+                    <td>{{location.lat}}</td>
+                    <td>{{location.lng}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="searched-locations--nodata" *ngIf="!locations.length">
+            {{MESSAGES.NO_SEARCHED_LOCATIONS}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+@import '~src/styles.scss';
+
+agm-map {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.map__search {
+    text-align: center;
+    margin: 50px auto;
+    .map__search--input {
+        margin: 5px;
+        .input {
+            width: 250px;
+            padding: 10px;
+            border: 1px solid $primaryBorder;
+            border-radius: 5px;
+        }
+    }
+    .map__search--submit {
+        margin: 5px;
+        .submit {
+            padding: 7px 20px;
+            background-color: $primaryBtn;
+            color: $selectedText;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+    }
+}

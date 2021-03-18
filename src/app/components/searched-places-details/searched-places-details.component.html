@@ -1,0 +1,23 @@
+<section class="searched-locations-details--section">
+    <div class="searched-locations-details">
+        <table class="searched-locations-details--data" aria-hidden="true">
+            <thead>
+                <tr>
+                    <th scope="col">Location Details</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="searched-location-details" *ngFor="let location of locations">
+                    <td>{{location.formatted_address}}</td>
+                    <td>{{location.lat}}</td>
+                    <td>{{location.lng}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="searched-locations-details--nodata" *ngIf="!locations.length">
+            {{MESSAGES.NO_SEARCHED_LOCATIONS}}
+        </div>
+    </div>
+</section>

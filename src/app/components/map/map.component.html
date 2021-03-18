@@ -1,0 +1,20 @@
+<section class="map--section">
+    <agm-map [(latitude)]="location.lat" [(longitude)]="location.lng" [(zoom)]="location.zoom" [disableDefaultUI]="true"
+        [zoomControl]="true" [(fitBounds)]='location.viewport'>
+        <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng" [markerDraggable]="false"
+            (dragEnd)="false"></agm-marker>
+    </agm-map>
+
+    <div class="map__search">
+        <div class="map__search--input">
+            <input type="text" class="input" placeholder="Enter location name" #search>
+        </div>
+        <div class="map__search--submit">
+            <input type="button" (click)="getLocationDetails(search.value)" class="submit" value="Search">
+        </div>
+    </div>
+
+    <div class="map__search--results">
+        <app-searched-places></app-searched-places>
+    </div>
+</section>
