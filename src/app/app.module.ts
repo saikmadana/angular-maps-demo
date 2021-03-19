@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { environment } from 'src/environments/environment';
+
 // Google map related module
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 
@@ -21,7 +23,7 @@ import { SearchedPlacesDetailsComponent } from './components/searched-places-det
   ],
   imports: [
     BrowserModule,
-    AgmCoreModule.forRoot({apiKey: 'API_KEY'}),
+    AgmCoreModule.forRoot({apiKey: environment.googleMapAPIKey}),
     AppRoutingModule,
   ],
   providers: [GoogleMapsAPIWrapper],
