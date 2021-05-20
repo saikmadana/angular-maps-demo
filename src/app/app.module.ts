@@ -23,7 +23,7 @@ import { SearchedPlacesDetailsComponent } from './components/searched-places-det
   ],
   imports: [
     BrowserModule,
-    AgmCoreModule.forRoot({apiKey: environment.googleMapAPIKey}),
+    AgmCoreModule.forRoot({apiKey: process.env.googleMapAPIKey}),
     AppRoutingModule,
   ],
   providers: [GoogleMapsAPIWrapper],
