@@ -20,6 +20,7 @@ describe('MapComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    component.ngOnInit();
+    expect(Object.keys(component.location).length).toBeGreaterThan(0);
   });
 });
